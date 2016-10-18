@@ -16,7 +16,7 @@ import { MultiselectConfig } from '../models';
  */
 @Component({
     selector: 'dropdown-multiselect[ngModel]',
-    template: ``,
+    template: `<h1>Testing</h1>`,
     styles: [`.multiselect-container {
                 display: inline-block; }`,
 
