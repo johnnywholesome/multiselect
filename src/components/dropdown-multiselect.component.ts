@@ -16,7 +16,38 @@ import { MultiselectConfig } from '../models';
  */
 @Component({
     selector: 'dropdown-multiselect[ngModel]',
-    template: `<h1>Testing</h1>`,
+    template: `<div class="multiselect-container" dropdown autoClose="outsideClick">
+                <button [ngClass]="config.buttonClasses" dropdownToggle>
+                    <span>{{buttonLabel}}</span> ({{selectedLength}})
+                    <span class="caret"></span>
+                </button>
+                <ul dropdownMenu class="dropdown-menu scrollable-menu" [style.max-height]="config.scrollingHeight + 'px'">
+                    <li *ngIf="config.showCheckAll" [ngClass]="{'with-border': !config.showUncheckAll }" class="top-section">
+                        <a class="dropdown-item dropdown-multiselect-clickable" (click)="checkAll()">
+                            <i *ngIf="config.checkClasses.length > 0" [ngClass]="config.checkClasses"></i>
+                            <input *ngIf="config.checkClasses.length === 0" type="checkbox" name="check-all" checked="checked" readonly />
+                            <span> Check All</span>
+                        </a>
+                    </li>
+                    <li *ngIf="config.showUncheckAll" class="top-section with-border">
+                        <a (click)="uncheckAll()" class="dropdown-item dropdown-multiselect-clickable">
+                            <i *ngIf="config.uncheckClasses.length > 0" [ngClass]="config.uncheckClasses"></i>
+                            <input *ngIf="config.uncheckClasses.length === 0" type="checkbox" name="uncheck-all" readonly />
+                            <span> Uncheck All</span>
+                        </a>
+                    </li>
+                    <li *ngFor="let row of cd.viewModel" role="menuitem">
+                        <a class="dropdown-item dropdown-multiselect-clickable" (click)="toggleRow(row)">
+                            <span class="check-area">
+                              <i *ngIf="row.selected && config.checkClasses.length > 0" [ngClass]="config.checkClasses"></i>
+                              <input *ngIf="config.checkClasses.length === 0" [name]="row.id + '-checkbox'" [(ngModel)]="row.selected" type="checkbox" />
+                            </span>
+                            <span *ngIf="row.color" [style.background-color]="row.color" class="row-color"></span>
+                            <span>{{row.label}}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>`,
     styles: [`.multiselect-container {
                 display: inline-block; }`,
 
@@ -226,8 +257,7 @@ export class DropdownMultiselectComponent implements ControlValueAccessor, OnIni
   private _setSelectedTo = (val: boolean) => {
 
     for (let i = 0; i < this.cd.viewModel.length; i++) {
-      //this.cd.viewModel[i].selected = val;
-      this.cd.viewModel[i].selected = !this.cd.viewModel.selected;
+      this.cd.viewModel[i].selected = val;
     };
 
   }
