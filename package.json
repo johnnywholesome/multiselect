@@ -1,0 +1,118 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "ng2-dropdown-multiselect",
+        "scope": null,
+        "escapedName": "ng2-dropdown-multiselect",
+        "name": "ng2-dropdown-multiselect",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/home/jon/nodeApps/multiselect"
+    ]
+  ],
+  "_from": "ng2-dropdown-multiselect@latest",
+  "_id": "ng2-dropdown-multiselect@0.3.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/ng2-dropdown-multiselect",
+  "_nodeVersion": "6.5.0",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/ng2-dropdown-multiselect-0.3.1.tgz_1475247439512_0.9035142774228007"
+  },
+  "_npmUser": {
+    "name": "andymeps",
+    "email": "andymeps@yahoo.com"
+  },
+  "_npmVersion": "3.10.7",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "ng2-dropdown-multiselect",
+    "scope": null,
+    "escapedName": "ng2-dropdown-multiselect",
+    "name": "ng2-dropdown-multiselect",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/ng2-dropdown-multiselect/-/ng2-dropdown-multiselect-0.3.1.tgz",
+  "_shasum": "b105328c0a6977a4665887ecb822a5aba4cb4f3d",
+  "_shrinkwrap": null,
+  "_spec": "ng2-dropdown-multiselect",
+  "_where": "/home/jon/nodeApps/multiselect",
+  "author": {
+    "name": "Andy Mepham"
+  },
+  "bugs": {
+    "url": "https://github.com/AndyMeps/ng2-dropdown-multiselect/issues"
+  },
+  "dependencies": {
+    "@angular/common": "^2.0.0",
+    "@angular/compiler": "^2.0.0",
+    "@angular/compiler-cli": "^0.6.2",
+    "@angular/core": "^2.0.0",
+    "@angular/forms": "^2.0.0",
+    "core-js": "^2.4.1",
+    "ng2-bootstrap": "^1.1.3",
+    "reflect-metadata": "^0.1.8",
+    "rxjs": "^5.0.0-beta.12",
+    "systemjs": "^0.19.38",
+    "zone.js": "^0.6.23"
+  },
+  "description": "Simple multiselect dropdown plugin for Angular 2",
+  "devDependencies": {
+    "concurrently": "^2.2.0",
+    "lite-server": "^2.2.2",
+    "tslint": "^3.15.1",
+    "typescript": "^2.0.0",
+    "typings": "^1.3.3"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "b105328c0a6977a4665887ecb822a5aba4cb4f3d",
+    "tarball": "https://registry.npmjs.org/ng2-dropdown-multiselect/-/ng2-dropdown-multiselect-0.3.1.tgz"
+  },
+  "gitHead": "0eb4a180b3be7e32fbc528173c06dd6de540bb69",
+  "homepage": "https://github.com/AndyMeps/ng2-dropdown-multiselect#readme",
+  "keywords": [
+    "multiselect",
+    "dropdown",
+    "multi",
+    "select",
+    "form",
+    "input"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "maintainers": [
+    {
+      "name": "andymeps",
+      "email": "andymeps@yahoo.com"
+    }
+  ],
+  "name": "ng2-dropdown-multiselect",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "url": "git+https://github.com/AndyMeps/ng2-dropdown-multiselect.git",
+    "type": "git"
+  },
+  "scripts": {
+    "bump:major": "npm version major -m \"%s [skip ci]\"",
+    "bump:minor": "npm version minor -m \"%s [skip ci]\"",
+    "bump:patch": "npm version patch -m \"%s [skip ci]\"",
+    "lint:ts": "tslint \"src/**/*.ts\"",
+    "postinstall": "typings install",
+    "prepublish": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "typings": "typings"
+  },
+  "version": "0.3.1"
+}
